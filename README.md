@@ -45,6 +45,7 @@ El sistema puede tener una tabla local con esos códigos o consultar un servicio
 
 2)Diagrama de casos de uso en uml:
 
+<img width="910" height="694" alt="image" src="https://github.com/user-attachments/assets/fdb47683-03b9-4035-a27a-abbb3f39b0ae" />
 
 
 3)Historias de usuario:
@@ -67,10 +68,12 @@ para corregir los datos y volver a intentar.
 
 4)Historia de usuario archivo Exel : 
 
+<img width="906" height="479" alt="image" src="https://github.com/user-attachments/assets/3a012eaa-7a0a-443a-93a2-8c1c1a06a7c0" />
 
 
 5) Diagrama de clases:
 
+<img width="1099" height="581" alt="image" src="https://github.com/user-attachments/assets/01c34fb9-fc4b-4a37-906b-094b16710f3a" />
 
 
 
