@@ -147,7 +147,7 @@ Verificamos que las pruebas agregadas funcionan correctamente:
 
 ![img6](docs/imagenes/pruebas.jpeg)
 
-#Relevancia de las pruebas:
+# Relevancia de las pruebas:
 
 PlaningPokerTest: verifica que haya concenso inmediato, si no lo hay que ocurra hasta lograrlo, reintento opr votos inválido; en general validan entrada y las ramas de control.
 
@@ -158,3 +158,35 @@ GestionCuentaTest: prueba general de escenarios funcionales y de error, creacion
 ValidadorCuentaTest: verifica los conjuntos validos y existencia de la cuenta en colecciones vacias o pobladas
 
 Cuenta, Transacción, Cliente, Banco, Administrador: comprobamos el funcionamiento adecuado y consistencia de creadores, estados, comportamiento de las colecciones, y evitar regresiones de datos.
+
+
+# RETO #6:  SonarQube 
+
+Descargamos y verificamos Docker
+
+![descarga](docs/imagenes/docker1.jpeg)
+![verif](docs/imagenes/docker2.jpeg)
+
+iniciamos sesion, cambiamos la contraseña, accedemos a my account security y generamos una user key por 30 dias
+
+![key](docs/imagenes/docker3.jpeg)
+
+generamos la integracion con sonar usando 
+
+mvn -U clean verify sonar:sonar `
+  "-Dsonar.host.url=http://localhost:9000" `
+  "-Dsonar.token=squ_8c0ef4644aa92b847c9183fa603314c24b8a3de8"
+
+![key](docs/imagenes/docker4.jpeg)
+
+y verificamos el analisis estático
+
+![key](docs/imagenes/dockerfin.jpeg)
+
+Reflexion:
+
+Diego: El realizar pruebas al software, nos aseguramos de ver más allá, de verificar el funcionamiento, pensar en que puede salir mal, y eso es algo que no siempre se hace, nos permite tener seguridad en la funcionalidad adecuada del codigo incluso en casos borde.
+
+Daniel: Para mí las pruebas son la red de seguridad del proyecto. Más de una vez “toqué” algo y rompí otra cosa sin querer; los tests me permiten darme cuenta al momento y refactorizar sin miedo. Gracias a esto el error/regaño es de JUnit en local y no el usuario en producción.
+
+Maria Paula: Las pruebas me hacen a pensar en los casos raros (nulos, límites, errores) y eso evita regresiones. Además dejan documentado cómo debe comportarse el sistema, si transcurre mucho tiempo, puedo seguir trabajando en mi proyecto y facilmente ver si sigo en el camino correcto usando tests. A la larga aunque pueden dar pereza de hacer, ahorran tiempo y dolores de cabeza.
