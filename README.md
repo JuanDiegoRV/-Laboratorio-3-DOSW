@@ -110,20 +110,20 @@ La lógica principal se encuentra en las siguientes clases:
    `ValidadorCuenta` puede extenderse fácilmente con nuevas estrategias de validación sin modificar lo que ya está 
 
 ## Evidencia Votaciones
-![img1](docs\imagenes\image-1.png)
+![img1](docs/imagenes/image-1.png)
 
-![img3](docs\imagenes\image-3.png)
+![img3](docs/imagenes/image-3.png)
 
-![img4](docs\imagenes\image-4.png)
+![img4](docs/imagenes/image-4.png)
 
-![img5](docs\imagenes\image-5.png)
+![img5](docs/imagenes/image-5.png)
 
 # Reto 3: Tiempo de desarrollo
 
 ## Implementacion de las clases y clases de pruebas(En el código)
 
 ## Evidencia pruebas exitosas
-![img6](docs\imagenes\image-6.png)
+![img6](docs/imagenes/image-6.png)
 
 ## Principios y Patrones Utilizados
 
