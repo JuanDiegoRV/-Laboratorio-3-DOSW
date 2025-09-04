@@ -11,6 +11,11 @@ public class GestionCuenta {
      * @return Cuenta creada
      */
     public Cuenta crearCuenta(int numero, int saldoInicial) {
+        boolean existe = cuentas.stream()
+                .anyMatch(c -> c.getNumeroCuenta() == numero);
+        if (existe) {
+            throw new IllegalArgumentException("Cuenta ya existe");
+        }
         Cuenta cuenta = new Cuenta(numero, saldoInicial);
         cuentas.add(cuenta);
         return cuenta;
@@ -23,6 +28,7 @@ public class GestionCuenta {
      * @return true si el depósito fue exitoso, false si no existe la cuenta
      */
     public boolean depositar(int numeroCuenta, int monto) {
+        if (monto <=0) return false;
         Optional<Cuenta> cuentaOpt = cuentas.stream()
                 .filter(c -> c.getNumeroCuenta() == numeroCuenta)
                 .findFirst();

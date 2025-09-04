@@ -1,8 +1,11 @@
-package edu.dosw.lab.agilismo.reto3;
+package edu.dosw.lab.agilismo.src.reto3;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,4 +34,5 @@ class SesionPlanningPokerTest {
         assertEquals(3, puntajesFinales.get("HU3 - Consultar saldo"));
         assertEquals(8, puntajesFinales.get("HU4 - Realizar depósito"));
     }
+
 }

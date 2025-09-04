@@ -137,8 +137,24 @@ La lógica principal se encuentra en las siguientes clases:
   `ValidadorCuenta` y cualquier nueva clase de validación que se agregue.
 
 
+# Reto 5: Corran que ahí viene El JaCOCO 
 
+modificamos el archivo pom en jacoco para establecer el requisito mínimo de cobertura
 
+![img6](docs/imagenes/Jacoco85.jpeg)
 
+Verificamos que las pruebas agregadas funcionan correctamente:
 
+![img6](docs/imagenes/pruebas.jpeg)
 
+#Relevancia de las pruebas:
+
+PlaningPokerTest: verifica que haya concenso inmediato, si no lo hay que ocurra hasta lograrlo, reintento opr votos inválido; en general validan entrada y las ramas de control.
+
+EstrategiaDeConsensoTest: cubre concenso y divergencia, además de los casos borde de un solo voto, lista vacia y null.
+
+GestionCuentaTest: prueba general de escenarios funcionales y de error, creacion y consulta de saldo, depositos, cuenta no existente, montos invalidos, cuentas duplicadas, validan el manejo de errores y valores invalidos.
+
+ValidadorCuentaTest: verifica los conjuntos validos y existencia de la cuenta en colecciones vacias o pobladas
+
+Cuenta, Transacción, Cliente, Banco, Administrador: comprobamos el funcionamiento adecuado y consistencia de creadores, estados, comportamiento de las colecciones, y evitar regresiones de datos.

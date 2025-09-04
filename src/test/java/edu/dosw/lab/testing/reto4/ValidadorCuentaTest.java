@@ -20,4 +20,19 @@ class ValidadorCuentaTest {
         assertTrue(validator.existeCuenta(List.of(c1), 1));
         assertFalse(validator.existeCuenta(List.of(c1), 99));
     }
+
+    @Test
+    void testTodasValidas_conUnaInvalida_false() {
+        Cuenta c1 = new Cuenta(1, 100);
+        Cuenta c2 = new Cuenta(2, 200);
+        c2.setEsValida(false);
+        ValidadorCuenta v = new ValidadorCuenta();
+        assertFalse(v.todasValidas(java.util.List.of(c1, c2)));
+    }
+
+    @Test
+    void testExisteCuenta_listaVacia_false() {
+        ValidadorCuenta v = new ValidadorCuenta();
+        assertFalse(v.existeCuenta(java.util.List.of(), 1));
+    }
 }
